@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<title></title>
+</head>
+<body>
+	<div class="header">
+		<img src="/img/gambar1.png">
+			<div class="text">
+				<h1>Hi girl..</h1>
+			</div>
+	</div>
+
+	<div class="container">
+	<img src="/img/gambar2.jpg">
+
+	<h1>"u"??</h1>
+	</div>
+	
+	<button id="btn_mau"><a href="https://wa.me/6281803237076/?text=gor, aku mau jadi pacar mu!">yes</a></button>
+	<button id="btn_gamau" onclick="gamau(this)" style="position: absolute;">no</button>
+	
+	<script>
+		function gamau(id){
+			var mau = document.getElementById('btn_mau');
+			var i = Math.floor(Math.random()*300)+1;
+			var j = Math.floor(Math.random()*100)+mau.offsetTop;
+			id.style.left = i+'px';
+			id.style.top = j+'px';
+		}
+	</script>
+</body>
+</html>
