@@ -43,9 +43,11 @@ body {
   opacity: 0.85;
 }
 .content {
+  border: 10px solid #000000;
   z-index: 99;
   width: 400px;
-  margin: auto;
+  margin: 22%;
+  margin-top: -80px;
 }
 .content h1{
   font-size: 50px;
@@ -56,4 +58,53 @@ a {
   font-size: 1.2rem;
   padding: 10px;
   text-decoration: none;
+}
+
+/* [SLIDER] */
+#slider,  #slider .slide{
+  width: 500px;
+  height: 250px;
+}
+#slider {
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 1.2em;
+  
+}
+#slider .container {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  animation: slide-animation 20s infinite;
+}
+#slider .slide {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+/* [ANIMATION] */
+@keyframes slide-animation {
+  0% { 
+    opacity: 0;
+    bottom: 0;
+  }
+  11% {
+    opacity: 1;
+    bottom: 0; 
+  }
+  22% { bottom: 100%; }
+  33% { bottom: 100%; }
+  44% { bottom: 200%; }
+  55% { bottom: 200%; }
+  66% { bottom: 300%; }
+  77% { bottom: 300%; }
+  88% {
+    opacity: 1;
+    bottom: 400%; 
+  }
+  100% {
+    opacity: 0;
+    bottom: 400%;
+  }
 }
