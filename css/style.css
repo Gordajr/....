@@ -1,64 +1,110 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" />
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: hidden;
+}
+.head {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.wrapper {
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+}
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.box video {
+  min-width: 100%;
+  min-height: 100%;
+}
+.header-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 45, 1);
+  background: rgba(0, 0, 45, 1)
+  z-index: 1;
+  opacity: 0.85;
+}
+.content {
+  /*border: 10px solid #000000;*/
+  z-index: 99;
+  width: 400px;
+  margin: 22%;
+  margin-top: -80px;
+}
+.content h1{
+  font-size: 50px;
+}
+a {
+  border: 2px solid #f90;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px;
+  text-decoration: none;
+}
 
-	<title>:)</title>
-</head>
-<body>
+/* [SLIDER] */
+#slider,  #slider .slide{
+  width: 500px;
+  height: 250px;
+}
+#slider {
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 1.2em;
   
-  <header class="wrapper head">
-    <div class="box">
-      	<video src="./asset/Mv3.mov" autoplay loop="true" muted playsinline></video>
-    </div>
-    <div class="content">
+}
+#slider .container {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  animation: slide-animation 20s infinite;
+}
+#slider .slide {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
 
-      <div id="slider">
-      <div class="container">
-        <div class="slide">
-          <h3>Slide 1</h3>
-          <p>
-            i hope you feel what i felt
-          </p>
-        </div>
-        <div class="slide">
-          <h3>Slide 2</h3>
-          <p>
-            this song is the definition of "The Right Person But At A Wrong Time"
-          </p>
-        </div>
-        <div class="slide">
-          <h3>Slide 3</h3>
-          <p>
-            it did feel that she's the riht one but we definitely met at the wrong time. It hurts but yeah..
-          </p>
-        </div>
-        <div class="slide">
-          <h3>Slide 4</h3>
-          <p>
-            Wow. I love her so much . She's literally the girl of my dreams. Sucks she already has a boyfriend. It was fun while it lasted
-          </p>
-        </div>
-        <div class="slide">
-          <h3>Slide 5</h3>
-          <p>
-            i'm making a whole ass website and this song is my inspiration
-          </p>
-        </div>
-      </div>
-    </div>
-      <audio id="audio" loop="true">
-  <source src="./asset/sound.mp3" type="audio/mpeg">
-</audio>
-      
-    </div>
-  </header>
-  <script src="codee.js"></script>
-
-</body>
-</html>
+/* [ANIMATION] */
+@keyframes slide-animation {
+  0% { 
+    opacity: 0;
+    bottom: 0;
+  }
+  11% {
+    opacity: 1;
+    bottom: 0; 
+  }
+  22% { bottom: 100%; }
+  33% { bottom: 100%; }
+  44% { bottom: 200%; }
+  55% { bottom: 200%; }
+  66% { bottom: 300%; }
+  77% { bottom: 300%; }
+  88% {
+    opacity: 1;
+    bottom: 400%; 
+  }
+  100% {
+    opacity: 0;
+    bottom: 400%;
+  }
+}
