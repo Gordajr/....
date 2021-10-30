@@ -17,6 +17,12 @@
       	<video src="./asset/Mv3.mov" autoplay loop="true" muted playsinline></video>
     </div>
     <div class="content">
+	    <audio id="audio" loop="true">
+  <source src="./asset/sound.mp3" type="audio/mpeg">
+  <button class="btn btn-primary" onclick="toggleMusic()" id="btn-playback" data-play="false">
+    <i class="fa fa-play"></i>
+    <span id="btn-text">PLAY</span>
+</audio>
 
       <div id="slider">
       <div class="container">
@@ -52,12 +58,7 @@
         </div>
       </div>
     </div>
-      <audio id="audio" loop="true">
-  <source src="./asset/sound.mp3" type="audio/mpeg">
-  <button class="btn btn-primary" onclick="toggleMusic()" id="btn-playback" data-play="false">
-    <i class="fa fa-play"></i>
-    <span id="btn-text">PLAY</span>
-</audio>
+      
       
     </div>
   </header>
