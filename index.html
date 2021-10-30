@@ -17,12 +17,10 @@
       	<video src="./asset/Mv3.mov" autoplay loop="true" muted playsinline></video>
     </div>
     <div class="content">
-	    <audio id="audio" loop="true">
-  <source src="./asset/sound.mp3" type="audio/mpeg">
-  <button class="btn btn-primary" onclick="toggleMusic()" id="btn-playback" data-play="false">
+      <button class="btn btn-primary" onclick="toggleMusic()" id="btn-playback" data-play="false">
     <i class="fa fa-play"></i>
     <span id="btn-text">PLAY</span>
-</audio>
+  </button>
 
       <div id="slider">
       <div class="container">
@@ -41,13 +39,13 @@
         <div class="slide">
           <h3></h3>
           <p>
-            it did feel that she's the right one but we definitely met at the wrong time. It hurts but yeah..
+            it did feel that she's the right one but we definitely met at the wrong time. It hurts but yeah...
           </p>
         </div>
         <div class="slide">
           <h3></h3>
           <p>
-            Wow. I love her so much. She's literally the girl of my dreams. Sucks she already has a boyfriend. It was fun while it lasted
+            Wow. I love her so much . She's literally the girl of my dreams. Sucks she already has a boyfriend. It was fun while it lasted
           </p>
         </div>
         <div class="slide">
@@ -58,11 +56,14 @@
         </div>
       </div>
     </div>
-      
-      
+      <audio id="audio" loop="true">
+        <source src="./asset/sound.mp3" type="audio/mpeg">
+      </audio>
+  </div>
     </div>
   </header>
   <script src="code.js"></script>
+  <script src="teks.js"></script>
 
 </body>
 </html>
